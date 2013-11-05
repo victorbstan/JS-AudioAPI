@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>TEST 1</title>
+      <link rel="stylesheet" href="">
+      <script src="/jquery.min.js"></script>
+
+      <style type="text/css" media="screen">
+        body {
+          font-family: sans-serif;
+          font-size:12px;
+        }
+
+        fieldset {
+          border: 1px solid #ccc;
+        }
+
+        hr {
+          height: 1px;
+          background: #ccc;
+          border: none;
+        }
+
+        #freqSlider {
+          width: 800px;
+        }
+
+        #freqDisplay {
+          width: 50px;
+        }
+      </style>
+  </head>
+  <body>
+    <h1>Web Audio - Tone Playing Experiment</h1>
+
+    <h2>
+      The below controls allow you to play sounds through <strong>Google Chrome</strong> and <strong>Safari 6+</strong>.
+    </h2>
+
+    <fieldset>
+      <legend>Frequency</legend>
+      <input id="freqSlider" type="range" value="500" min="0" max="22000" step="1" />
+      <input id="freqDisplay" type="text">
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Volume</legend>
+      <input id="volume" type="range" name="volume" value="20">
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Wave Type</legend>
+      <select id="comboWaveType">
+        <option value="0" selected>Sine</option>
+        <option value="1" >Square</option>
+        <option value="2" >Sawtooth</option>
+        <option value="3" >Triangle</option>
+      </select>
+    </fieldset>
+
+    <br>
+
+    <button id="btnPlay">Play Sound</button>
+    <button id="btnPause">Pause Sound</button>
+
+    <hr>
+
+    <button id="btnSlowClimb">Slowly Increase Frequency</button>
+    <button id="btnSlowClimbStop">Stop Increase Frequency</button>
+
+    <hr>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
